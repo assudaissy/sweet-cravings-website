@@ -1,0 +1,384 @@
+.hero-section {
+  position: relative;
+  padding: 140px 0 80px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF7F9 100%);
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Left Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-light);
+  color: var(--secondary);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 22px;
+  width: fit-content;
+}
+
+.hero-pill-logo {
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-heading);
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+
+.highlight-pink {
+  color: var(--primary);
+  position: relative;
+}
+
+.highlight-pink::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--primary-subtle);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.highlight-brown {
+  color: var(--secondary);
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 560px;
+}
+
+.hero-description strong {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+/* CTA Buttons */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+}
+
+.hero-wa-btn {
+  padding: 16px 32px;
+  font-size: 1.05rem;
+}
+
+.hero-menu-btn {
+  padding: 15px 28px;
+  font-size: 1rem;
+}
+
+.arrow-icon {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.hero-menu-btn:hover .arrow-icon {
+  transform: translateY(3px);
+}
+
+/* Features List */
+.hero-features-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border-light);
+}
+
+.hero-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.hero-feature-item strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text-heading);
+}
+
+.hero-feature-item p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Right Visual Side */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-stack {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+}
+
+.hero-main-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid #FFFFFF;
+  background: #FFFFFF;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hero-main-card:hover .hero-main-img {
+  transform: scale(1.04);
+}
+
+.hero-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 22px;
+  background: linear-gradient(180deg, rgba(84, 34, 13, 0) 0%, rgba(84, 34, 13, 0.92) 100%);
+  color: #FFFFFF;
+}
+
+.hero-card-tag {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-card-title {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.hero-card-price {
+  color: #FFE4EC;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* Floating Cards */
+.hero-float-card {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-lg);
+  border: 1.5px solid var(--border-light);
+  z-index: 3;
+  animation: floatAnim 4.5s ease-in-out infinite;
+}
+
+.float-top-right {
+  top: -24px;
+  right: -24px;
+}
+
+.float-bottom-left {
+  bottom: -24px;
+  left: -24px;
+  animation-delay: 2.2s;
+}
+
+/* Brand Logo inside floating hero card */
+.float-brand-logo {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.float-thumb {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.float-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.float-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.float-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.float-price {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.float-rating {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.float-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Decorative background blob */
+.hero-bg-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(229, 0, 80, 0.12) 0%, rgba(84, 34, 13, 0.05) 50%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-features-list {
+    max-width: 600px;
+  }
+
+  .float-top-right {
+    right: 0;
+  }
+
+  .float-bottom-left {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 110px 0 60px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-features-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: left;
+  }
+
+  .hero-main-img {
+    height: 360px;
+  }
+
+  .float-top-right {
+    top: -12px;
+    right: -10px;
+  }
+
+  .float-bottom-left {
+    bottom: -16px;
+    left: -10px;
+  }
+}

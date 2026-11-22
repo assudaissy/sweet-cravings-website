@@ -1,0 +1,197 @@
+.product-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 16px 32px rgba(84, 34, 13, 0.1);
+}
+
+.product-card.is-featured-card {
+  border-color: rgba(229, 0, 80, 0.35);
+}
+
+/* Image Container */
+.product-image-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: var(--bg-soft-pink);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.06);
+}
+
+/* Badges */
+.product-badges-top {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.product-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.badge-bestseller {
+  background: var(--primary);
+  color: #FFFFFF;
+}
+
+.badge-standard {
+  background: var(--secondary);
+  color: #FFFFFF;
+}
+
+.product-category-chip {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--secondary);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Body */
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-rating-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.product-rating-stars {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.product-kitchen-tag {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.product-description {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Footer & Order Button */
+.product-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-light);
+  gap: 12px;
+}
+
+.product-price-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 65%;
+}
+
+.price-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.product-price-value {
+  line-height: 1.25;
+}
+
+.price-exact {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+  word-break: break-word;
+}
+
+.price-contact {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--secondary);
+  background: var(--bg-warm-cream);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  line-height: 1.35;
+}
+
+.product-options-chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--secondary);
+  background: var(--bg-soft-pink);
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.product-order-btn {
+  padding: 9px 18px;
+  font-size: 0.88rem;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.wa-icon-sm {
+  flex-shrink: 0;
+}

@@ -1,0 +1,81 @@
+.floating-wa-wrapper {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.floating-wa-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+  position: relative;
+  transition: transform 0.25s ease, background 0.25s ease;
+  text-decoration: none;
+}
+
+.floating-wa-btn:hover {
+  background: var(--whatsapp-hover);
+  transform: scale(1.1);
+  color: #FFFFFF;
+}
+
+.floating-wa-ping {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--whatsapp);
+  opacity: 0.8;
+  animation: pulseGlow 2.5s infinite;
+  pointer-events: none;
+}
+
+.floating-wa-tooltip {
+  background: var(--secondary);
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: var(--transition);
+}
+
+.floating-wa-tooltip.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 640px) {
+  .floating-wa-wrapper {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .floating-wa-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .floating-wa-btn svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .floating-wa-tooltip {
+    display: none;
+  }
+}

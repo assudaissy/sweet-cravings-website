@@ -1,0 +1,12 @@
+/* App Layout Wrapper */
+.sweet-cravings-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-white);
+  color: var(--text-body);
+}
+
+#main-content {
+  flex: 1 0 auto;
+}
